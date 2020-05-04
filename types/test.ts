@@ -1,0 +1,3 @@
+import stylelint from './'
+
+stylelint()
