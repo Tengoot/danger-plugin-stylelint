@@ -6,7 +6,7 @@ import stylelint from 'stylelint'
 export default async function stylelint() {
   const filesToLint = danger.git.created_files.concat(danger.git.modified_files)
   return Promise.all(
-    filesToLint.filter(f => /css$/.test(f)).map(f => lintFile(cli, config, f)),
+    filesToLint.filter(f => /css$/.test(f)).map(f => lintFile(f)),
   )
 }
 
